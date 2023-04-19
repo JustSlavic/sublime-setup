@@ -1,0 +1,182 @@
+{
+    "name": "Asuka Dark",
+    "author": "Slava Radko",
+    "variables":
+    {
+        "fg": "#CECECE",
+        "bg": "#0E1415",
+        "active": "#CD974B",
+
+        "black": "hsl(0, 0%, 0%)",
+        "blue": "hsl(210, 50%, 60%)",
+        "blue-vibrant": "hsl(210, 60%, 60%)",
+        "blue2": "hsla(210, 13%, 40%, 0.7)",
+        "blue3": "hsl(210, 15%, 22%)",
+        "blue4": "hsl(210, 13%, 45%)",
+        "blue5": "hsl(180, 36%, 54%)",
+        "blue6": "hsl(221, 12%, 69%)",
+        "green": "hsl(114, 31%, 68%)",
+        "grey": "hsl(0, 0%, 20%)",
+        "orange": "hsl(32, 93%, 66%)",
+        "orange2": "hsl(32, 85%, 55%)",
+        "orange3": "hsl(40, 94%, 68%)",
+        "pink": "hsl(300, 30%, 68%)",
+        "red": "hsl(358, 100%, 65%)",
+        "red2": "hsl(13, 93%, 66%)",
+        "white": "hsl(0, 0%, 100%)",
+        "white2": "hsl(0, 0%, 97%)",
+        "white3": "hsl(219, 28%, 88%)",
+
+        "comment-green": "#55BB52",
+        "string-green": "#95CB82",
+        "constant-purple": "#AFAFDF",
+        "punctuation-grey": "#606D6D",
+
+        "todo-yellow": "#cfcf1f",
+        "note-blue": "#719DD7",
+    },
+    "globals":
+    {
+        "foreground":                  "var(fg)",
+        "background":                  "var(bg)",
+        "caret":                       "var(active)",
+        "line_highlight":              "#ffffff20",
+        "misspelling":                 "#f00",
+
+        "selection":                   "#293334",
+        "selection_border_width":      "0",
+        "selection_corner_radius":     "2",
+
+        "highlight":                   "var(active)",
+        "find_highlight_foreground":   "#000",
+        "find_highlight":              "var(active)",
+
+        "brackets_options":            "underline",
+        "brackets_foreground":         "var(active)",
+        "bracket_contents_options":    "underline",
+        "bracket_contents_foreground": "var(active)",
+
+        "tags_options":                "underline",
+        "tags_foreground":             "var(active)",
+    },
+    "rules":
+    [
+        {
+            "name":       "Comments",
+            "scope":      "comment, punctuation.definition.comment, invalid comment",
+            "foreground": "var(comment-green)"
+        },
+        {
+            "name":       "String",
+            "scope":      "string.quoted, build-result.path",
+            "foreground": "var(string-green)"
+        },
+        {
+            "name":       "Constant",
+            "scope":      "constant, support.constant",
+            "foreground": "var(constant-purple)"
+        },
+        {
+            "name":       "Punctuation",
+            "scope":      "punctuation, comment.block.preprocessor.if-branch.c, comment.block.preprocessor.else-branch.c",
+            "foreground": "var(punctuation-grey)"
+        },
+        // {
+        //     "name":       "Keyword",
+        //     "scope":      "keyword",
+        //     "foreground": "var(orange)"
+        // },
+        {
+            "name":       "Keyword",
+            "scope":      "keyword.control.glsl, keyword.control.hlsl",
+            "foreground": "var(orange)"
+        },
+        {
+            "name": "Embedded Language",
+            "scope": "source.embedded-language",
+            "foreground": "color(var(fg) blenda(#000000 90% hsl))",
+            "background": "var(black)",
+        },
+        {
+            "name": "Keywords GLSL",
+            "scope": "keyword.glsl",
+            "foreground": "var(red)",
+        },
+        {
+            "name":       "Macro",
+            "scope":      "asuka.macro",
+            "foreground": "#D5D4FF"
+        },
+        {
+            "name":       "Preprocessor",
+            "scope":      "keyword.control.import",
+            "foreground": "#D5D4FF"
+        },
+        {
+            "name":       "Declaration name",
+            "scope":      "entity.name.type, entity.name.class, entity.name.struct, entity.name.enum, entity.name.union, entity.name.namespace",
+            "foreground": "var(orange)"
+        },
+        {
+            "name":       "Function name",
+            "scope":      "variable.function, entity.name.function",
+            "foreground": "#719DD7"
+        },
+        {
+            "name": "Variables",
+            "scope": "variable",
+            "foreground": "var(fg)"
+        },
+        {
+            "name":       "Operator",
+            "scope":      "keyword.operator, punctuation.definition.string",
+            "foreground": "#709B9D"
+        },
+        {
+            "name": "Multithreading synchronization",
+            "scope": "storage.modifier.volatile, keyword.synchronization.asuka",
+            "foreground": "var(red)"
+        },
+        // {
+        //     "name":       "Type",
+        //     "scope":      "storage",
+        //     "foreground": "var(blue)"
+        // },
+        // {
+        //     "name":       "Asm",
+        //     "scope":      "asuka.asm",
+        //     "foreground": "#A5A5A5"
+        // },
+        {
+            "name":       "Note",
+            "scope":      "comment.note",
+            "foreground": "var(note-blue)"
+        },
+        {
+            "name":       "Todo",
+            "scope":      "comment.todo",
+            "foreground": "var(todo-yellow)"
+        },
+        {
+            "name":       "Nocommit",
+            "scope":      "comment.nocommit, comment.error",
+            "foreground": "#cf1f1f"
+        },
+        {
+            "name":       "At comment",
+            "scope":      "comment.at",
+            "foreground": "var(orange2)",
+        },
+        {
+            "name":       "Mistakes",
+            "scope":      "invalid, invalid string, invalid constant, invalid entity.name, invalid punctuation, invalid source.symbol",
+            "foreground": "#f00",
+            "background": "#4B1D1E"
+        },
+        {
+            "name":       "Template parameters",
+            "scope":      "asuka.template",
+            "foreground": "#a385e4",
+        },
+    ]
+}

@@ -1,0 +1,41 @@
+{
+    "theme": "Adaptive.sublime-theme",
+    "color_scheme": "Asuka.sublime-color-scheme",
+    "font_face": "JetBrains Mono",
+    "font_size": 11,
+    "ui_scale": 1.0,
+    // "font_options": ["no_liga", "no_clig", "no_calt"],
+
+    // Set to true to insert spaces when tab is pressed
+    "translate_tabs_to_spaces": true,
+
+    // Set to true to ensure the last line of the file ends in a newline
+    // character when saving
+    "ensure_newline_at_eof_on_save": true,
+
+    // Remove all trailing whitespaces, but not on current line,
+    // to prevent caret from jumping suddenly
+    "trim_trailing_white_space_on_save": "not_on_caret",
+
+    // Set to true to automatically save files when switching to a different file
+    // or application
+    "save_on_focus_lost": true,
+
+    // By default, shift+tab will only unindent if the selection spans
+    // multiple lines. When pressing shift+tab at other times, it'll insert a
+    // tab character - this allows tabs to be inserted when tab_completion is
+    // enabled. Set this to true to make shift+tab always unindent, instead of
+    // inserting tabs.
+    "shift_tab_unindent": true,
+
+    // Display file encoding in the status bar
+    "show_encoding": true,
+
+    // Display line endings in the status bar
+    "show_line_endings": true,
+    "ignored_packages":
+    [
+        "Vintage",
+    ],
+    "auto_complete": true,
+}
