@@ -1,15 +1,15 @@
 %YAML 1.2
 ---
-name: "Polar GCC Build"
-scope: asuka
+name: "Polar GCC Build Output"
+scope: polar
 contexts:
   main:
     - match: '\['
-      scope: asuka.punctuation
+      scope: polar.punctuation
       push: brackets
 
     - match: '‘'
-      scope: asuka.string.begin
+      scope: polar.string.begin
       push: gcc_backtick
 
     - match: '^([\w\/\.\_]+)(\:)(\d+)(\:)(\d+)(\:)'
@@ -30,13 +30,13 @@ contexts:
       scope: warning
 
   brackets:
-    - meta_scope: asuka.win32_build.brackets asuka.string
+    - meta_scope: polar.win32_build.brackets polar.string
     - match: '\]'
       scope: punctuation
       pop: true
 
   gcc_backtick:
-    - meta_scope: asuka.string
+    - meta_scope: polar.string
     - match: '’'
       scope: string.end
       pop: true

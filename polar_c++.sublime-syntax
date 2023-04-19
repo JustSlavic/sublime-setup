@@ -195,7 +195,7 @@ contexts:
     - match: '\bvolatile\b'
       scope: storage.modifier.c++ storage.modifier.volatile.c++
     - match: '\b(READ_BARRIER|WRITE_BARRIER|READ_WRITE_BARRIER)\b'
-      scope: keyword.synchronization.asuka.c++
+      scope: keyword.synchronization.c++
 
   modifiers:
     - match: \b({{modifiers}})\b
