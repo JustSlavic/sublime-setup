@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: GLSL
+name: "Polar GLSL"
 file_extensions:
   - glsl
 scope: source.glsl

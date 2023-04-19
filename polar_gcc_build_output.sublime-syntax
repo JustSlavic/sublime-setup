@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Asuka_BuildResults
+name: "Polar GCC Build"
 scope: asuka
 contexts:
   main:

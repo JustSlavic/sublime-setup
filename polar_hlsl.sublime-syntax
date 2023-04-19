@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: HLSL
+name: "Polar HLSL"
 file_extensions:
   - hlsl
 scope: source.hlsl

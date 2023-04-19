@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Asuka
+name: "Polar C++"
 scope: source.c++
 
 file_extensions:

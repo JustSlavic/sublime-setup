@@ -1,6 +1,6 @@
 %YAML 1.2
 ---
-name: Asuka_BuildResults
+name: "Polar MSVC Build"
 scope: asuka
 contexts:
   main:
