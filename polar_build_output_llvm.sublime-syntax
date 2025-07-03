@@ -1,0 +1,37 @@
+%YAML 1.2
+---
+name: "Polar LLVM Build Output"
+scope: polar
+contexts:
+  main:
+    - match: '(In file included from)\s+'
+      scope: polar.path.prelude
+      push: filepath
+
+    - match: '^([\.\/\w\d]+)'
+      scope: polar.path string.quoted
+      push: error
+
+  filepath:
+    - meta_scope: polar.path
+    - match: '([\.\/\w\d]+)(:)(\d+)(:)$'
+      captures:
+        1: string.quoted
+        2: punctuation
+        3: constant
+        4: punctuation
+      pop: true
+
+  error:
+    - meta_scope: polar.path
+    - match: '(:)(\d+)(:)(\d+)(:)\s+(error)(:)'
+      captures:
+        1: punctuation
+        2: constant
+        3: punctuation
+        4: constant
+        5: punctuation
+        6: comment.error
+        7: punctuation
+    - match: '$'
+      pop: true
