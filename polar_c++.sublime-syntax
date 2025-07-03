@@ -554,10 +554,10 @@ contexts:
     # All uppercase identifier just before a newline is most likely a macro
     - match: '[[:upper:][:digit:]_]+\s*$'
     # Identifier that is not the function name - likely a macro
-    - match: '{{identifier}}(?!\s*(\(|$))'
+    - match: '{{identifier}}(::)?(?!\s*(\(|$))'
     # Real function definition
     - match: '{{identifier}}(?=\s*(\(|$))'
-      scope: meta.function.c entity.name.function.c
+      scope: meta.function.c entity.name.function.c meta.toc-list.full-identifier.c++
       set: function-definition-params
     - match: '(?=\S)'
       pop: true
