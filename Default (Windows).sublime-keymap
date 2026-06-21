@@ -24,4 +24,14 @@
     { "keys": ["ctrl+alt+k"], "command": "scroll_lines", "args": {"amount": -1.0 } },
 
     { "keys": ["f5"], "command": "build", "args": {"build_system": "Run", "variant": "Run"} },
+
+    {
+        "keys": ["ctrl+alt+e"],
+        "caption": "Open Containing folder...",
+        "command": "open_dir",
+        "args": {
+            "dir": "$file_path",
+            "file": "$file_name"
+        }
+    }
 ]
